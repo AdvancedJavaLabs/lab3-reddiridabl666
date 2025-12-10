@@ -1,0 +1,43 @@
+<configuration> 
+  <property><name>mapreduce.framework.name</name><value>yarn</value></property> 
+  <property><name>mapreduce.jobhistory.address</name><value>localhost:10020</value></property> 
+  <property><name>mapreduce.jobhistory.webapp.address</name><value>localhost:19888</value></property> 
+  <property><name>mapreduce.job.reduce.slowstart.completedmaps</name><value>0.8</value></property> 
+  <property><name>yarn.app.mapreduce.am.resource.cpu-vcores</name><value>1</value></property> 
+  <property><name>yarn.app.mapreduce.am.resource.mb</name><value>1024</value></property> 
+  <property><name>yarn.app.mapreduce.am.command-opts</name><value>-Djava.net.preferIPv4Stack=true -Xmx768m</value></property> 
+  <property><name>mapreduce.map.cpu.vcores</name><value>1</value></property> 
+  <property><name>mapreduce.map.memory.mb</name><value>1024</value></property> 
+  <property><name>mapreduce.map.java.opts</name><value>-Djava.net.preferIPv4Stack=true -Xmx768m</value></property> 
+  <property><name>mapreduce.reduce.cpu.vcores</name><value>1</value></property> 
+  <property><name>mapreduce.reduce.memory.mb</name><value>1024</value></property> 
+  <property><name>mapreduce.reduce.java.opts</name><value>-Djava.net.preferIPv4Stack=true -Xmx768m</value></property> 
+
+   <property>
+    <name>yarn.app.mapreduce.am.env</name>
+    <value>HADOOP_MAPRED_HOME=/opt/hadoop</value>
+  </property>
+  <property>
+    <name>mapreduce.map.env</name>
+    <value>HADOOP_MAPRED_HOME=/opt/hadoop</value>
+  </property>
+  <property>
+    <name>mapreduce.reduce.env</name>
+    <value>HADOOP_MAPRED_HOME=/opt/hadoop</value>
+  </property>
+  
+  <property>
+    <name>mapreduce.application.classpath</name>
+    <value>
+      /opt/hadoop/etc/hadoop/*,
+      /opt/hadoop/share/hadoop/common/*,
+      /opt/hadoop/share/hadoop/common/lib/*,
+      /opt/hadoop/share/hadoop/hdfs/*,
+      /opt/hadoop/share/hadoop/hdfs/lib/*,
+      /opt/hadoop/share/hadoop/mapreduce/*,
+      /opt/hadoop/share/hadoop/mapreduce/lib/*,
+      /opt/hadoop/share/hadoop/yarn/*,
+      /opt/hadoop/share/hadoop/yarn/lib/*
+    </value>
+  </property>
+</configuration>
