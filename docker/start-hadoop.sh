@@ -31,12 +31,27 @@ fi
 echo "Starting Hadoop services..."
 hdfs --daemon start namenode
 sleep 5
-hdfs --daemon start datanode
-if [ $? -ne 0 ]; then
-    echo "DataNode failed to start!"
-    # Покажи ошибку
-    hdfs datanode 2>&1 | head -20
-fi
+
+for i in {1..3}; do
+    mkdir -p /data/dn$i
+
+    HADOOP_PID_DIR=/tmp/dn$i \
+    hdfs datanode \
+        -Ddfs.datanode.address=0.0.0.0:$((50010 + i)) \
+        -Ddfs.datanode.data.dir=/data/dn$i \
+        -Ddfs.datanode.ipc.address=0.0.0.0:$((50020 + i)) \
+        -Ddfs.datanode.http.address=0.0.0.0:$((9866 + i)) \
+        &
+
+    if [ $? -ne 0 ]; then
+        echo "DataNode failed to start!"
+        # Покажи ошибку
+        hdfs datanode 2>&1 | head -20
+    fi
+
+    sleep 8
+done
+
 sleep 3  
 yarn --daemon start resourcemanager
 sleep 2
