@@ -59,7 +59,7 @@ export LANG=en_US.UTF-8
 
 # Location of Hadoop.  By default, Hadoop will attempt to determine
 # this location based upon its execution path.
-# export HADOOP_HOME=
+export HADOOP_HOME=/opt/hadoop
 
 # Location of Hadoop's configuration information.  i.e., where this
 # file is living. If this is not defined, Hadoop will attempt to
@@ -94,6 +94,7 @@ export LANG=en_US.UTF-8
 # export HADOOP_OPTS="-Djava.net.preferIPv4Stack=true"
 # For Kerberos debugging, an extended option set logs more information
 # export HADOOP_OPTS="-Djava.net.preferIPv4Stack=true -Dsun.security.krb5.debug=true -Dsun.security.spnego.debug"
+export HADOOP_OPTS="--add-opens java.base/java.lang=ALL-UNNAMED"
 
 # Some parts of the shell code may do special things dependent upon
 # the operating system.  We have to set this here. See the next
