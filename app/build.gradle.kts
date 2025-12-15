@@ -46,7 +46,7 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = "org.lab.PriceQuantityDriver"
+    mainClass = "org.lab.Driver"
 }
 
 tasks.named<Test>("test") {

@@ -13,6 +13,8 @@ if [ $# -lt 2 ]; then
     REDUCERS=1
 fi
 
+./gradlew fatJar
+
 docker cp $INPUT $HADOOP_NAME:/tmp/
 
 docker exec $HADOOP_NAME hdfs dfs -put /tmp/$INPUT /$INPUT
