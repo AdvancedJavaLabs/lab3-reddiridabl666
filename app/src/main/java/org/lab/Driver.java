@@ -25,6 +25,7 @@ public class Driver {
         }
 
         reducersNum = Integer.parseInt(args[2]);
+
         int blockSizeKB = Integer.parseInt(args[3]);
 
         Configuration conf = new Configuration();
