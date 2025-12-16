@@ -1,0 +1,21 @@
+Category        Revenue Quantity
+gardening tools 1008561966.334996       202192
+clothing        1007248356.124004       200708
+home appliances 1006912573.276004       200768
+furniture       1006544014.807999       200052
+music instruments       1004189054.627995       200433
+video games     1004028296.393006       201249
+baby products   1003726034.628003       201271
+toys    1003067588.603988       200294
+beauty products 1001471966.396001       200872
+groceries       1001100730.305987       201067
+electronics     1000455104.061999       200994
+automotive      997153657.199005        199714
+office equipment        996422905.487006        198678
+sports equipment        995965801.217993        199227
+books   995615759.945008        199461
+health & wellness       994228655.008009        198760
+pet supplies    993607814.426992        199156
+stationery      988799500.216006        197875
+jewelry 985275668.399995        197660
+footwear        980870712.645006        197210
