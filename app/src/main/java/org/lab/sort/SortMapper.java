@@ -13,8 +13,6 @@ public class SortMapper extends Mapper<LongWritable, Text, DoubleWritable, Text>
             return;
         }
 
-        System.out.println("GOT IN SORT MAPPER: " + value);
-
         String[] fields = value.toString().split("\t");
 
         double price = Double.parseDouble(fields[1]);
